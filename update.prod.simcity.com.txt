@@ -17,6 +17,9 @@ where packagefilename is the file name of the .package file that represents the 
 where date is the date that the file was last updated in DD-Mmm-YYYY HH:MM (where Mmm is [Jan, Feb, Mar, ...])
 where size is the size of the file in human-readable format (XXK, XXM, XXG)
 
+SimCity cross-references this manifest with the directory listing of %APPDATA%\Roaming\SimCity\EcoGame.
+If a file in the manifest is not found in the directory, it is downloaded from update.prod.simcity.com/<filename>
+
 Simcity.Updates.UpdaterControl
 [Global Information]
 A list of update table entries.
