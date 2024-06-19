@@ -1,0 +1,29 @@
+SimCity Update API
+[ Base URL: update.prod.simcity.com ]
+
+GET /game_scripts_manifest.html: Get a manifest of the game scripts.
+Parameters: [No Data.]
+Responses:
+200: SimCity.Updates.GameScriptsManifest
+
+GET /UpdaterControl.bin: Get a manifest of the SimCityData.
+Parameters: [No Data.]
+Responses:
+200: SimCity.Updates.UpdaterControl
+
+SimCity.Updates.GameScriptsManifest
+format: <a href="packagefilename">packagefilename</a>    date size
+where packagefilename is the file name of the .package file that represents the game script.
+where date is the date that the file was last updated in DD-Mmm-YYYY HH:MM (where Mmm is [Jan, Feb, Mar, ...])
+where size is the size of the file in human-readable format (XXK, XXM, XXG)
+
+Simcity.Updates.UpdaterControl
+[Global Information]
+A list of update table entries.
+
+Update table entry:
+Offset Length Desc
+0x00   0x04   The length of the package filename.
+0x04   var    The package filename.
+
+TODO: This doesn't cover all bases. There are many anomalies in the file that don't follow this format.

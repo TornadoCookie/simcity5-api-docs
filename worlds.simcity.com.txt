@@ -1,0 +1,53 @@
+SimCity Worlds Api
+[ Base URL: worlds.simcity.com ]
+
+Parallel Worlds
+GET /parallelworlds.json: Get SimCity server information.
+Parameters: None.
+
+Responses:
+200: Returns a SimCity.Worlds.Responses.ParallelWorldsResponse object in application/json format.
+
+Models
+
+SimCity.Worlds.Responses.ParallelWorldsResponse:
+{
+  version integer($int32)
+  hosts [
+    The available SimCity servers to connect to.
+    SimCity.Worlds.World
+  ]
+}
+
+SimCity.Worlds.World:
+{
+  Desc string
+    The human-readable name of the server.
+  name string
+    The machine-readable name of the server.
+  url string
+    The URL to the server address.
+  game string
+    Copy of URL.
+  websocket string
+    Copy of URL with ":2001" appended.
+  telemetry string
+    URL to send telemetry data to. ("http://telemetry.simcity.com")
+  news string
+    URL to get news data from. Copy of URL.
+  statuses [
+    The statuses that this server has.
+    Simcity.Worlds.WorldStatus
+  ]
+  id integer($int32)
+    A unique identifier for the server.
+  sort integer($int32)
+    At what index this server pops up at in the server list.
+}
+
+SimCity.Worlds.WorldStatus:
+{
+  status string
+    The status of the server.
+    Enum: {"available", "full", "maintenance"}
+}

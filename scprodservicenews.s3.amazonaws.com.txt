@@ -1,0 +1,25 @@
+SimCity News API
+[ Base URL: scprodservicenews.s3.amazonaws.com ]
+
+Announcements
+
+GET /<server>/<lang>/announcement.json: Get announcements.
+
+Parameters:
+server (string): The "P-Identifier" (pXX) of the server to get the announcement for. (Ex. "p21.api.awsprod.simcity.com" -> "p21")
+lang (string): The language to get the announcements in (en_US, ru_RU)
+
+Responses:
+200: A SimCity.News.Announcement object in application/json format.
+
+Models
+
+SimCity.News.Announcement:
+{
+  message string
+    The header.
+  name string
+    The description.
+  locale string
+    The locale passed to the "lang" parameter.
+}

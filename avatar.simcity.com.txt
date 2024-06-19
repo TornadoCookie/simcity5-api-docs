@@ -1,0 +1,13 @@
+SimCity Avatar API
+[ Base URL: avatar.simcity.com ]
+
+Avatar Icons
+
+GET /<username>/avatar_<size>.jpeg: Get a user's avatar icon.
+Parameters:
+username (string) The username of the user.
+size (string) SMALL, MEDIUM, or LARGE: the size of the avatar to get.
+
+Responses:
+200: The user's avatar icon in image/jpeg format.
+403: Forbidden
