@@ -24,9 +24,4 @@ Simcity.Updates.UpdaterControl
 [Global Information]
 A list of update table entries.
 
-Update table entry:
-Offset Length Desc
-0x00   0x04   The length of the package filename.
-0x04   var    The package filename.
-
-TODO: This doesn't cover all bases. There are many anomalies in the file that don't follow this format.
+In PROP format, look at my project OpenSC5 for a parser written in C for that.
