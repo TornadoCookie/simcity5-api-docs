@@ -1,0 +1,15 @@
+SimCity Telemetry API
+[ Base URL: http://telemetry.simcity.com ]
+
+GET /simcity/telemetry/settings.json: Unknown.
+  The data contained in this file has been lost to time.
+
+POST /simcity/telemetry/telemetryevent: Send a telemetry event to the server.
+Parameters
+  eventId: SC_CONFIG
+  eventData: Data about the user's configuration.
+  timeStamp: The UNIX timestamp of the request.
+  buildVersion: 0:0:0:0
+  sessionId: ???
+  shard: ???
+  userId: ???
